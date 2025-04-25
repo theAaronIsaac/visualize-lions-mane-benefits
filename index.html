@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lion's Mane Mushroom: Brain & Neuronal Benefits</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Lion's Mane Mushroom: Brain & Neuronal Benefits</h1>
+            <h2>An interactive exploration of the science behind lion's mane extract</h2>
+            <div class="hero-image">
+                <!-- Hero image will be added here -->
+            </div>
+            <p class="intro">
+                Lion's mane mushroom (Hericium erinaceus) has been used in traditional medicine for centuries. 
+                Modern science is now revealing its remarkable benefits for brain health and neuronal growth.
+                Explore this interactive guide to learn how this fascinating fungus may enhance cognitive function 
+                and support neurological health.
+            </p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#cognitive-benefits">Cognitive Benefits</a></li>
+                <li><a href="#neurological-benefits">Neurological Benefits</a></li>
+                <li><a href="#mechanisms">Mechanisms of Action</a></li>
+                <li><a href="#research">Research Evidence</a></li>
+                <li><a href="#safety">Safety & Side Effects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="brain-visualization" class="brain-vis-section">
+        <div class="container">
+            <h2>Interactive Brain Visualization</h2>
+            <p>Explore how lion's mane extract affects different regions of the brain and promotes neuronal growth.</p>
+            <div class="brain-model">
+                <!-- 3D brain model will be rendered here using Three.js -->
+            </div>
+            <div class="neuron-growth-simulator">
+                <h3>Neuron Growth Simulator</h3>
+                <p>Slide to see how lion's mane extract affects neuron growth over time</p>
+                <div class="simulator-controls">
+                    <input type="range" min="0" max="100" value="0" class="growth-slider" id="growthSlider">
+                    <div class="slider-labels">
+                        <span>Day 0</span>
+                        <span>Day 28</span>
+                    </div>
+                </div>
+                <div class="neuron-visualization">
+                    <!-- Neuron growth visualization will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cognitive-benefits" class="benefits-section">
+        <div class="container">
+            <h2>Cognitive Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card" id="memory">
+                    <div class="card-front">
+                        <h3>Memory Enhancement</h3>
+                        <img src="images/memory-icon.svg" alt="Memory icon">
+                    </div>
+                    <div class="card-back">
+                        <p>Research shows lion's mane extract can significantly enhance recognition memory in both animal and human studies.</p>
+                        <p>A study from The University of Queensland found that lion's mane mushroom extract had a significant impact on improving memory formation.</p>
+                    </div>
+                </div>
+                <div class="benefit-card" id="processing">
+                    <div class="card-front">
+                        <h3>Mental Processing Speed</h3>
+                        <img src="images/speed-icon.svg" alt="Processing speed icon">
+                    </div>
+                    <div class="card-back">
+                        <p>A double-blind, placebo-controlled study found that following a single dose of Hericium erinaceus, participants performed quicker on cognitive tasks.</p>
+                        <p>This suggests improved cognitive processing speed after just one dose.</p>
+                    </div>
+                </div>
+                <div class="benefit-card" id="focus">
+                    <div class="card-front">
+                        <h3>Focus & Concentration</h3>
+                        <img src="images/focus-icon.svg" alt="Focus icon">
+                    </div>
+                    <div class="card-back">
+                        <p>The bioactive compounds in lion's mane may help improve focus and concentration by supporting overall brain health and neural communication.</p>
+                    </div>
+                </div>
+                <div class="benefit-card" id="mood">
+                    <div class="card-front">
+                        <h3>Mood Improvement</h3>
+                        <img src="images/mood-icon.svg" alt="Mood icon">
+                    </div>
+                    <div class="card-back">
+                        <p>Studies have shown that lion's mane extract may help reduce symptoms of depression and anxiety.</p>
+                        <p>In one study, women who consumed lion's mane cookies for 4 weeks reported lower levels of depressive symptoms and stress compared to the placebo group.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-comparison">
+                <h3>Before & After Cognitive Performance</h3>
+                <div class="comparison-chart">
+                    <!-- D3.js visualization will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="neurological-benefits" class="benefits-section">
+        <div class="container">
+            <h2>Neurological Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card" id="ngf">
+                    <div class="card-front">
+                        <h3>NGF Stimulation</h3>
+                        <img src="images/ngf-icon.svg" alt="NGF icon">
+                    </div>
+                    <div class="card-back">
+                        <p>Hericenones and erinacines isolated from lion's mane can induce Nerve Growth Factor (NGF) synthesis in nerve cells.</p>
+                        <p>NGF is essential for the maintenance of the basal forebrain cholinergic system, which is involved in attention, memory, and cognitive function.</p>
+                    </div>
+                </div>
+                <div class="benefit-card" id="bdnf">
+                    <div class="card-front">
+                        <h3>BDNF Effects</h3>
+                        <img src="images/bdnf-icon.svg" alt="BDNF icon">
+                    </div>
+                    <div class="card-back">
+                        <p>An increase in circulating pro-brain-derived neurotrophic factor (BDNF) has been observed following hericene A administration.</p>
+                        <p>BDNF plays a crucial role in neuronal survival and growth, synaptic plasticity, and cognitive function.</p>
+                    </div>
+                </div>
+                <div class="benefit-card" id="growth">
+                    <div class="card-front">
+                        <h3>Neuron Growth</h3>
+                        <img src="images/growth-icon.svg" alt="Neuron growth icon">
+                    </div>
+                    <div class="card-back">
+                        <p>Laboratory tests showed that neurons exposed to lion's mane mushroom extracts were up to twice as long as those not exposed.</p>
+                        <p>The extract increases the size of growth cones, which are important for brain cells to sense their environment and establish new connections.</p>
+                    </div>
+                </div>
+                <div class="benefit-card" id="protection">
+                    <div class="card-front">
+                        <h3>Neuroprotection</h3>
+                        <img src="images/protection-icon.svg" alt="Neuroprotection icon">
+                    </div>
+                    <div class="card-back">
+                        <p>Lion's mane shows promising potential as a neuroprotective agent, capable of regulating inflammatory processes, reducing oxidative stress, and safeguarding nerve cells from apoptosis.</p>
+                        <p>This may help protect against neurodegenerative disorders such as Alzheimer's and Parkinson's disease.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="neuron-comparison">
+                <h3>Neuron Development Visualization</h3>
+                <div class="neuron-vis">
+                    <!-- Neuron visualization will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mechanisms" class="mechanisms-section">
+        <div class="container">
+            <h2>Mechanisms of Action</h2>
+            <div class="compounds-explorer">
+                <h3>Bioactive Compounds</h3>
+                <div class="compound-tabs">
+                    <button class="tab-btn active" data-compound="hericenones">Hericenones</button>
+                    <button class="tab-btn" data-compound="erinacines">Erinacines</button>
+                    <button class="tab-btn" data-compound="polysaccharides">Polysaccharides</button>
+                </div>
+                <div class="compound-content">
+                    <div class="compound-info active" id="hericenones-info">
+                        <div class="compound-structure">
+                            <!-- 3D molecular structure will be rendered here -->
+                        </div>
+                        <div class="compound-description">
+                            <h4>Hericenones</h4>
+                            <p>Found primarily in the fruiting body of the mushroom, hericenones can induce NGF synthesis in nerve cells and easily cross the blood-brain barrier.</p>
+                            <p>They have been shown to exert anti-neuroinflammatory and neuroprotective properties in animal models.</p>
+                        </div>
+                    </div>
+                    <div class="compound-info" id="erinacines-info">
+                        <div class="compound-structure">
+                            <!-- 3D molecular structure will be rendered here -->
+                        </div>
+                        <div class="compound-description">
+                            <h4>Erinacines</h4>
+                            <p>Found primarily in the mycelium of the mushroom, erinacines are potent inducers of NGF synthesis and can easily cross the blood-brain barrier.</p>
+                            <p>Erinacine A-enriched H. erinaceus has shown improvements in patients with mild Alzheimer's disease.</p>
+                        </div>
+                    </div>
+                    <div class="compound-info" id="polysaccharides-info">
+                        <div class="compound-structure">
+                            <!-- 3D molecular structure will be rendered here -->
+                        </div>
+                        <div class="compound-description">
+                            <h4>Polysaccharides</h4>
+                            <p>Lion's mane contains various polysaccharides with antioxidant properties that contribute to its overall neuroprotective effects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pathway-diagram">
+                <h3>Neurological Pathways</h3>
+                <div class="pathway-visualization">
+                    <!-- Interactive pathway diagram will be rendered here -->
+                </div>
+                <div class="pathway-description">
+                    <p>Lion's mane compounds work through multiple pathways to support brain health:</p>
+                    <ul>
+                        <li>NGF Stimulation Pathway: Inducing the secretion of extracellular NGF in nerve cells</li>
+                        <li>BDNF Pathway: Increasing circulating pro-BDNF for neuronal survival and growth</li>
+                        <li>Anti-inflammatory Mechanisms: Reducing neuroinflammation associated with neurodegenerative diseases</li>
+                        <li>Antioxidant Effects: Protecting neurons from damage caused by free radicals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="research-section">
+        <div class="container">
+            <h2>Research Evidence</h2>
+            <div class="research-timeline">
+                <!-- Interactive timeline will be rendered here -->
+            </div>
+            <div class="study-cards">
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All Studies</button>
+                    <button class="filter-btn" data-filter="cognitive">Cognitive</button>
+                    <button class="filter-btn" data-filter="neurological">Neurological</button>
+                    <button class="filter-btn" data-filter="clinical">Clinical Trials</button>
+                </div>
+                <div class="cards-container">
+                    <!-- Study cards will be dynamically generated here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="safety" class="safety-section">
+        <div class="container">
+            <h2>Safety & Side Effects</h2>
+            <div class="safety-grid">
+                <div class="safety-card">
+                    <h3>Known Side Effects</h3>
+                    <ul>
+                        <li>Allergic reactions (rare)</li>
+                        <li>Gastrointestinal discomfort</li>
+                        <li>Skin sensitivity</li>
+                        <li>Headache</li>
+                    </ul>
+                </div>
+                <div class="safety-card">
+                    <h3>Precautions</h3>
+                    <ul>
+                        <li>Consult with a healthcare provider before use</li>
+                        <li>Use caution if you have allergies or asthma</li>
+                        <li>Not recommended during pregnancy or breastfeeding</li>
+                        <li>Discontinue before surgery</li>
+                    </ul>
+                </div>
+                <div class="safety-card">
+                    <h3>Quality Considerations</h3>
+                    <p>The supplement industry is largely unregulated. Choose products from reputable manufacturers with third-party testing.</p>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> This information is for educational purposes only and is not intended as medical advice. Consult with a healthcare professional before starting any supplement regimen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">How long does it take to see benefits from lion's mane?</button>
+                    <div class="accordion-content">
+                        <p>Research suggests that some cognitive benefits may be observed after a single dose, while other benefits may take 4-8 weeks of consistent supplementation to become noticeable. Neurological benefits likely require longer-term use.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">What is t
+(Content truncated due to size limit. Use line ranges to read in chunks)

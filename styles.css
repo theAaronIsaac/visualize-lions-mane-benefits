@@ -1,0 +1,529 @@
+/* Main Styles for Lion's Mane Interactive Webpage */
+
+/* Base Styles */
+:root {
+    --primary-color: #8b5a2b;
+    --secondary-color: #d4a76a;
+    --accent-color: #e27d60;
+    --light-color: #f9f3e9;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --background-color: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* Header Styles */
+.hero {
+    background-color: var(--light-color);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Navigation Styles */
+.main-nav {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.main-nav li {
+    margin: 0 1rem;
+}
+
+.main-nav a {
+    display: block;
+    padding: 1rem 0;
+    color: var(--light-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.main-nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Brain Visualization Section */
+.brain-vis-section {
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.brain-model {
+    height: 400px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.neuron-growth-simulator {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.simulator-controls {
+    margin: 2rem 0;
+}
+
+.growth-slider {
+    width: 100%;
+    height: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ddd;
+    outline: none;
+    border-radius: 5px;
+}
+
+.growth-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    cursor: pointer;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+}
+
+.neuron-visualization {
+    height: 300px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Benefits Sections */
+.benefits-section {
+    background-color: var(--background-color);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.benefit-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--light-color);
+}
+
+.card-front img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.card-back {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 2rem;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+
+.benefit-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.benefit-card:hover .card-back {
+    transform: rotateY(0);
+}
+
+.interactive-comparison, .neuron-comparison {
+    margin: 4rem 0;
+    padding: 2rem;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.comparison-chart, .neuron-vis {
+    height: 400px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Mechanisms Section */
+.mechanisms-section {
+    background-color: var(--light-color);
+}
+
+.compounds-explorer {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.compound-tabs {
+    display: flex;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.tab-btn {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.compound-content {
+    position: relative;
+    min-height: 300px;
+}
+
+.compound-info {
+    display: none;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.compound-info.active {
+    display: grid;
+}
+
+.compound-structure {
+    height: 300px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.pathway-diagram {
+    margin: 4rem 0;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.pathway-visualization {
+    height: 400px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin: 1rem 0 2rem;
+}
+
+.pathway-description ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Research Section */
+.research-section {
+    background-color: var(--background-color);
+}
+
+.research-timeline {
+    height: 200px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin: 2rem 0;
+}
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--light-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Safety Section */
+.safety-section {
+    background-color: var(--light-color);
+}
+
+.safety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.safety-card {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.safety-card ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.disclaimer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8d7da;
+    border-radius: 5px;
+    color: #721c24;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: var(--background-color);
+}
+
+.accordion {
+    margin: 2rem 0;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--light-color);
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.accordion-header:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: var(--background-color);
+}
+
+.accordion-item.active .accordion-content {
+    padding: 1rem;
+    max-height: 500px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 3rem 0;
+}
+
+.references {
+    margin-bottom: 2rem;
+}
+
+.references h3 {
+    color: var(--light-color);
+}
+
+#reference-list {
+    margin-left: 1.5rem;
+}
+
+footer .disclaimer {
+    background-color: transparent;
+    color: var(--light-color);
+    opacity: 0.8;
+    padding: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-nav li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .compound-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .compound-structure {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .benefit-card {
+        height: 250px;
+    }
+    
+    .card-front img {
+        width: 60px;
+        height: 60px;
+    }
+}
